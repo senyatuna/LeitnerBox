@@ -11,6 +11,7 @@ import AVFoundation
 struct LeitnerBoxApp: App, DropDelegate {
     @State private var dragOver = false
     @State var hideSplash = false
+    @State private var showTViews = false
     var isUnitTesting = ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_TEST"] == "1"
 
     var body: some Scene {
@@ -36,6 +37,12 @@ struct LeitnerBoxApp: App, DropDelegate {
                 if !isUnitTesting {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                         hideSplash = true
+                    }
+                }
+            }
+            .sheet(isPresented: $showTViews) {
+                if true {
+                    ImagePicker(sourceType: .camera) { (a,b) in                    
                     }
                 }
             }
