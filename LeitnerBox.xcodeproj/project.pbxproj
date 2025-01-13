@@ -119,7 +119,6 @@
 		05F1C8B2288AD07B00CD5F1E /* ReviewWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05F1C8AD288AD07A00CD5F1E /* ReviewWidget.intentdefinition */; };
 		05F1C8B5288AD07B00CD5F1E /* ReviewWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05F1C8A5288AD07A00CD5F1E /* ReviewWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AC5BEEA52D0872E9005AF803 /* QuestionLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BEEA42D0872E9005AF803 /* QuestionLocationView.swift */; };
-		AC90490B2D3502B100042B07 /* ChatModels in Frameworks */ = {isa = PBXBuildFile; productRef = AC90490A2D3502B100042B07 /* ChatModels */; };
 		ACCDFBB42D0DEBEC00C048C3 /* libavutil.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCDFBAC2D0DEBEC00C048C3 /* libavutil.xcframework */; };
 		ACCDFBB52D0DEBEC00C048C3 /* libavutil.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACCDFBAC2D0DEBEC00C048C3 /* libavutil.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACCDFBB62D0DEBEC00C048C3 /* libavdevice.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCDFBAD2D0DEBEC00C048C3 /* libavdevice.xcframework */; };
@@ -139,6 +138,7 @@
 		ACCDFBC62D0DEFD900C048C3 /* LeitnerBoxOpusConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDFBC52D0DEFD900C048C3 /* LeitnerBoxOpusConverter.swift */; };
 		ACCDFBC82D0E054D00C048C3 /* DownloadAndPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDFBC72D0E054D00C048C3 /* DownloadAndPlayButton.swift */; };
 		ACDD7BE12D055FC800EE1321 /* QuestionImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDD7BE02D055FC800EE1321 /* QuestionImagesView.swift */; };
+		AEF29EE92D35072E0002F9A3 /* ChatModels in Frameworks */ = {isa = PBXBuildFile; productRef = AEF29EE82D35072E0002F9A3 /* ChatModels */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCDFBB62D0DEBEC00C048C3 /* libavdevice.xcframework in Frameworks */,
-				AC90490B2D3502B100042B07 /* ChatModels in Frameworks */,
+				AEF29EE92D35072E0002F9A3 /* ChatModels in Frameworks */,
 				ACCDFBC02D0DEBEC00C048C3 /* libavfilter.xcframework in Frameworks */,
 				ACCDFBBC2D0DEBEC00C048C3 /* libavcodec.xcframework in Frameworks */,
 				ACCDFBB82D0DEBEC00C048C3 /* libavformat.xcframework in Frameworks */,
@@ -862,7 +862,7 @@
 			);
 			mainGroup = 05266AAD28367DA9004693BC;
 			packageReferences = (
-				AC9049092D35014600042B07 /* XCLocalSwiftPackageReference "../../Fanap/Talk/submodules/SDK/Chat/submodules/ChatModels" */,
+				AEF29EE72D3507220002F9A3 /* XCLocalSwiftPackageReference "../../submodules/ChatModels" */,
 			);
 			productRefGroup = 05266AB728367DA9004693BC /* Products */;
 			projectDirPath = "";
@@ -1577,16 +1577,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		AC9049092D35014600042B07 /* XCLocalSwiftPackageReference "../../Fanap/Talk/submodules/SDK/Chat/submodules/ChatModels" */ = {
+		AEF29EE72D3507220002F9A3 /* XCLocalSwiftPackageReference "../../submodules/ChatModels" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Fanap/Talk/submodules/SDK/Chat/submodules/ChatModels;
+			relativePath = ../../submodules/ChatModels;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AC90490A2D3502B100042B07 /* ChatModels */ = {
+		AEF29EE82D35072E0002F9A3 /* ChatModels */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AC9049092D35014600042B07 /* XCLocalSwiftPackageReference "../../Fanap/Talk/submodules/SDK/Chat/submodules/ChatModels" */;
+			package = AEF29EE72D3507220002F9A3 /* XCLocalSwiftPackageReference "../../submodules/ChatModels" */;
 			productName = ChatModels;
 		};
 /* End XCSwiftPackageProductDependency section */
