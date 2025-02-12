@@ -69,29 +69,7 @@ struct LevelRowLableMutableView: View {
 
             Spacer()
 
-            VStack {
-                HStack(spacing: 0) {
-                    Text(verbatim: "\(reviewableCount)")
-                        .foregroundColor(.accentColor.opacity(1))
-                    Spacer()
-                    Text(verbatim: "\(levelRowData.totalCountInsideLevel)")
-                        .foregroundColor(.primary.opacity(1))
-                }
-                .font(.footnote)
-
-                ProgressView(
-                    value: Float(reviewableCount),
-                    total: Float(levelRowData.totalCountInsideLevel)
-                )
-                .progressViewStyle(.linear)
-                .animation(.easeOut(duration: 0.3), value: reviewableCount)
-                .onAppear {
-                    Timer.scheduledTimer(withTimeInterval: 0.01, repeats: false) { _ in
-                        reviewableCount = levelRowData.reviewableCount
-                    }
-                }
-            }
-            .frame(maxWidth: sizeClass == .regular ? 192 : 128)
+            progressViewAndCount
         }
         .contextMenu {
             Button {
@@ -105,6 +83,32 @@ struct LevelRowLableMutableView: View {
             LevelConfigView(level: levelRowData.level)
                 .frame(width: 640, height: 120)
         }
+    }
+    
+    private var progressViewAndCount: some View {
+        VStack {
+            HStack(spacing: 0) {
+                Text(verbatim: "\(reviewableCount)")
+                    .foregroundColor(.accentColor.opacity(1))
+                Spacer()
+                Text(verbatim: "\(levelRowData.totalCountInsideLevel)")
+                    .foregroundColor(.primary.opacity(1))
+            }
+            .font(.footnote)
+
+            ProgressView(
+                value: Float(reviewableCount),
+                total: Float(levelRowData.totalCountInsideLevel)
+            )
+            .progressViewStyle(.linear)
+            .animation(.easeOut(duration: 0.3), value: reviewableCount)
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 0.01, repeats: false) { _ in
+                    reviewableCount = levelRowData.reviewableCount
+                }
+            }
+        }
+        .frame(maxWidth: sizeClass == .regular ? 192 : 128)
     }
 }
 
