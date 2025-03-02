@@ -6,7 +6,7 @@
 
 import SwiftUI
 import AVFoundation
-import ChatModels
+import Chat
 
 @main
 struct LeitnerBoxApp: App, DropDelegate {
